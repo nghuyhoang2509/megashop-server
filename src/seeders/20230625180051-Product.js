@@ -16,7 +16,7 @@ module.exports = {
       {
         name: "Laptop Xiaomi RedmiBook 15 JYU4506AP",
         desc: "Ram 8GB, Chip Intel Core i5 thế hệ 11 - Xử lý liền mạch các tác vụ hằng ngày\nMàn hình FHD, kích thước 15.6 inch - Màn hình lớn cải thiện chất lượng làm việc Laptop Xiaomi Redmibook 15 JYU4506AP –hoạt động mạnh mẽ\nLaptop Xiaomi Redmibook 15 JYU4506AP là dòng máy bình dân được sản xuất dành cho học sinh, sinh viên hoặc dân văn phòng. Thiết bị được trang bị bộ vi xử lý cao cấp, bộ nhớ có dung lượng cao cùng nhiều ưu điểm vượt trội khác nên ngay từ khi mới ra mắt sản phẩm đã nhanh chóng chiếm được cảm tinh nhiều người dùng.",
-        quantity: 0,
+        quantity: 20,
         price: 13290000,
         salesPrice: 13190000,
         image:

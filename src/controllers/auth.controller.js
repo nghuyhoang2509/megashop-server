@@ -4,7 +4,7 @@ const {
   checkEmail,
   checkFullName,
   checkPassword,
-} = require("../util/auth");
+} = require("../util/checkParams");
 const { ACCESS_TOKEN, OPTION_SET_COOKIE } = require("../constants/cookie");
 const AuthService = require("../services/auth.service");
 
