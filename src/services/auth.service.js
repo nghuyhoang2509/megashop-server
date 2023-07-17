@@ -5,6 +5,7 @@ const {
   createAccessToken,
 } = require("../util/auth");
 const uuid = require("uuid");
+const CONSTANT_ROLE = require("../constants/role");
 
 module.exports = {
   /**
@@ -83,5 +84,26 @@ module.exports = {
     queryUser.accessToken = "";
     await queryUser.save();
     return true;
+  },
+  async getAllUser() {
+    return await User.findAll({
+      attributes: ["fullName", "email", "role", "id"],
+    });
+  },
+
+  /**
+   *
+   * @param {Number} userId
+   * @param {String} role
+   */
+  async changeRole(userId, role) {
+    let newRole = CONSTANT_ROLE.CUSTOMER;
+    if (role == CONSTANT_ROLE.ADMIN) {
+      throw new Error("Không thể phân quyền cho người dùng có quyền cao nhất");
+    }
+    if (role == CONSTANT_ROLE.CUSTOMER) {
+      newRole = CONSTANT_ROLE.MANAGER;
+    }
+    return await User.update({ role: newRole }, { where: { id: userId } });
   },
 };

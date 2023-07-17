@@ -1,15 +1,33 @@
 const ProductRouter = require("express").Router();
 const ProductController = require("../controllers/product.controller");
-const { checkAuth } = require("../middlewares/auth.middleware");
+const {
+  checkAuth,
+  checkPermissonManager,
+} = require("../middlewares/auth.middleware");
 
 ProductRouter.get("/", ProductController.getAllProduct);
 
-ProductRouter.post("/order", checkAuth, ProductController.createOrder);
-
-ProductRouter.get("/category", ProductController.getAllCategory);
-
-ProductRouter.get("/category/:id", ProductController.getProductByCategory);
-
 ProductRouter.get("/:id", ProductController.getProduct);
+
+ProductRouter.post(
+  "/",
+  checkAuth,
+  checkPermissonManager,
+  ProductController.createProduct
+);
+
+ProductRouter.patch(
+  "/",
+  checkAuth,
+  checkPermissonManager,
+  ProductController.deleteProduct
+);
+
+ProductRouter.put(
+  "/",
+  checkAuth,
+  checkPermissonManager,
+  ProductController.updateProduct
+);
 
 module.exports = ProductRouter;

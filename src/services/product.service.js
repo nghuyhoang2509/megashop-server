@@ -4,88 +4,82 @@ const {
   Order,
   OrderProduct,
   User,
+  image,
+  Brand,
 } = require("../models/index");
+const { Op } = require("sequelize");
 
 module.exports = {
-  /**
-   * @param {Number} userId
-   * @param {String} fullName
-   * @param {String} email
-   * @param {String} address
-   * @param {String} phone
-   * @param {Array} products
-   */
-  async createOrder(userId, fullName, email, address, phone, products) {
-    let queryProducts = [];
-    let total = 0;
-    // Kiểm tra xem số lượng sản phẩm còn đủ không
-    let checkQty = null;
-    for (const product of products) {
-      const queryProduct = await Product.findByPk(product.id);
-      if (product.qtyOrder > queryProduct.quantity) {
-        checkQty = {
-          qtyOrder: product.qtyOrder,
-          quantity: queryProduct.quantity,
-          name: product.name,
-        };
-        break;
-      } else {
-        queryProduct.qtyOrder = product.qtyOrder;
-        queryProduct.quantity -= product.qtyOrder;
-        total +=
-          (product.salesPrice == null ? product.price : product.salesPrice) *
-          product.qtyOrder;
-        queryProducts.push(queryProduct);
-      }
-    }
-    if (checkQty) {
-      throw new Error(
-        `Sản phẩm ${checkQty.name} không còn đủ số lượng chỉ còn ${checkQty.quantity}`
-      );
-    }
-    // Tạo đơn (Order)
-    const order = await Order.create({ address, phone, total, userId });
-    // Thay đổi số lượng sản phẩm trong kho và tạo OrderProduct với mỗi sản phẩm
-    await queryProducts.forEach(async (product) => {
-      await product.save();
-      await OrderProduct.create({
-        productId: product.id,
-        orderId: order.id,
-        qtyOrder: product.qtyOrder,
-      });
-    });
-    return true;
-  },
-  async getAllOrder() {
-    return await Order.findAll({
+  async getAllProduct(brandId, categoryId, search) {
+    const options = {
       include: [
-        { model: User, as: "users", attributes: ["fullName", "email"] },
-        {
-          model: OrderProduct,
-          as: "orderproducts",
-          include: [{ model: Product, as: "orderproducts" }],
-        },
+        { model: Category, as: "categories" },
+        { model: Brand, as: "brands" },
+        { model: image, as: "image", attributes: ["id", "url"] },
       ],
-    });
+      where: {},
+    };
+    if (brandId) {
+      options.where.brandId = brandId;
+    }
+    if (categoryId) {
+      options.where.categoryId = categoryId;
+    }
+    if (search) {
+      options.where.name = { [Op.like]: `%${search}%` };
+    }
+    return await Product.findAll(options);
   },
-  async getAllCategory() {
-    return await Category.findAll();
-  },
-  async getAllProduct() {
-    return await Product.findAll({
-      include: { model: Category, as: "categories" },
+
+  async getProduct(id) {
+    return await Product.findByPk(id, {
+      include: [
+        { model: Category, as: "categories" },
+        { model: Brand, as: "brands" },
+      ],
     });
   },
   /**
    *
-   * @param {Number} id Id của category
+   * @param {{name: String,desc: String,quantity: Number,price: Number,salesPrice: Number,image: String,categoryId: Number}} object
+   * @returns
    */
-  async getProductByCategory(id) {
-    return await Product.findAll({ where: { categoryId: id } });
-  },
-  async getProduct(id) {
-    return await Product.findByPk(id, {
-      include: { model: Category, as: "categories" },
+  async createProduct({
+    name,
+    desc,
+    quantity,
+    price,
+    salesPrice,
+    image,
+    categoryId,
+    brandId,
+  }) {
+    return await Product.create({
+      name,
+      desc,
+      quantity,
+      price,
+      salesPrice,
+      image,
+      categoryId,
+      brandId,
     });
+  },
+  /**
+   *
+   * @param {Array} productId
+   * @returns
+   */
+  async deleteProduct(productId) {
+    return await Product.destroy({ where: { id: { [Op.in]: productId } } });
+  },
+  /**
+   *
+   * @param {{id:Number,name: String,desc: String,quantity: Number,price: Number,salesPrice: Number,image: String,categoryId: Number}} product
+   * @returns
+   */
+  async updateProduct(product) {
+    const { id, ...productUpdate } = product;
+    return await Product.update(productUpdate, { where: { id: id } });
   },
 };

@@ -19,9 +19,9 @@ module.exports = {
         quantity: 20,
         price: 13290000,
         salesPrice: 13190000,
-        image:
-          "https://res.cloudinary.com/dbpvy9xt6/image/upload/f_auto,q_auto/v1/product/lsupyihggsejjuhf59y3",
+        imageId: null,
         categoryId: 1,
+        brandId: null,
       },
       {
         name: "Laptop Asus Gaming Rog Strix G15 G513IH HN015W",
@@ -29,9 +29,9 @@ module.exports = {
         quantity: 123,
         price: 17990000,
         salesPrice: 17890000,
-        image:
-          "https://res.cloudinary.com/dbpvy9xt6/image/upload/f_auto,q_auto/v1/product/lsupyihggsejjuhf59y3",
+        imageId: null,
         categoryId: 1,
+        brandId: null,
       },
       {
         name: "Laptop ASUS Gaming TUF FX506LHB-HN188W",
@@ -39,9 +39,9 @@ module.exports = {
         quantity: 123,
         price: 15490000,
         salesPrice: 15390000,
-        image:
-          "https://res.cloudinary.com/dbpvy9xt6/image/upload/f_auto,q_auto/v1/product/hpmlnnm8qe9tev2vbztu",
+        imageId: null,
         categoryId: 1,
+        brandId: null,
       },
       {
         name: "Laptop HP Envy X360 13-BD0063DX",
@@ -49,9 +49,9 @@ module.exports = {
         quantity: 123,
         price: 17990000,
         salesPrice: 17890000,
-        image:
-          "https://res.cloudinary.com/dbpvy9xt6/image/upload/f_auto,q_auto/v1/product/lsupyihggsejjuhf59y3",
+        imageId: null,
         categoryId: 1,
+        brandId: null,
       },
       {
         name: "Laptop HP Gaming Victus 15-FA0031DX 6503849",
@@ -59,9 +59,9 @@ module.exports = {
         quantity: 123,
         price: 16790000,
         salesPrice: 16690000,
-        image:
-          "https://res.cloudinary.com/dbpvy9xt6/image/upload/f_auto,q_auto/v1/product/lsupyihggsejjuhf59y3",
+        imageId: null,
         categoryId: 1,
+        brandId: null,
       },
       {
         name: "Laptop Dell Inspiron 16 5620 N6I7110W1",
@@ -69,9 +69,9 @@ module.exports = {
         quantity: 123,
         price: 21790000,
         salesPrice: 21690000,
-        image:
-          "https://res.cloudinary.com/dbpvy9xt6/image/upload/f_auto,q_auto/v1/product/lsupyihggsejjuhf59y3",
+        imageId: null,
         categoryId: 1,
+        brandId: null,
       },
       {
         name: "Laptop Dell gaming G15 5511 4XJ74 Nhập khẩu chính hãng",
@@ -79,9 +79,9 @@ module.exports = {
         quantity: 123,
         price: 26990000,
         salesPrice: 26890000,
-        image:
-          "https://res.cloudinary.com/dbpvy9xt6/image/upload/f_auto,q_auto/v1/product/lsupyihggsejjuhf59y3",
+        imageId: null,
         categoryId: 1,
+        brandId: null,
       },
       {
         name: "iPhone 14 Pro Max",
@@ -89,8 +89,7 @@ module.exports = {
         quantity: 123,
         price: 26990000,
         salesPrice: 26890000,
-        image:
-          "https://res.cloudinary.com/dbpvy9xt6/image/upload/v1687768368/product/bfh9drykmje25tzxa7rt.png",
+        imageId: null,
         categoryId: 3,
       },
       {
@@ -99,8 +98,7 @@ module.exports = {
         quantity: 123,
         price: 31990000,
         salesPrice: 31890000,
-        image:
-          "https://res.cloudinary.com/dbpvy9xt6/image/upload/f_auto,q_auto/v1/product/ouic5pghprstpazdtouc",
+        imageId: null,
         categoryId: 3,
       },
       {
@@ -109,8 +107,7 @@ module.exports = {
         quantity: 123,
         price: 5790000,
         salesPrice: 5690000,
-        image:
-          "https://res.cloudinary.com/dbpvy9xt6/image/upload/f_auto,q_auto/v1/product/ouic5pghprstpazdtouc",
+        imageId: null,
         categoryId: 3,
       },
       {
@@ -119,8 +116,7 @@ module.exports = {
         quantity: 123,
         price: 9690000,
         salesPrice: 9590000,
-        image:
-          "https://res.cloudinary.com/dbpvy9xt6/image/upload/f_auto,q_auto/v1/product/ouic5pghprstpazdtouc",
+        imageId: null,
         categoryId: 3,
       },
       {
@@ -129,8 +125,7 @@ module.exports = {
         quantity: 123,
         price: 6490000,
         salesPrice: 6390000,
-        image:
-          "https://res.cloudinary.com/dbpvy9xt6/image/upload/v1687768368/product/bfh9drykmje25tzxa7rt.png",
+        imageId: null,
         categoryId: 2,
       },
       {
@@ -139,8 +134,7 @@ module.exports = {
         quantity: 0,
         price: 7990000,
         salesPrice: 7890000,
-        image:
-          "https://res.cloudinary.com/dbpvy9xt6/image/upload/v1687768368/product/bfh9drykmje25tzxa7rt.png",
+        imageId: null,
         categoryId: 2,
       },
       {
@@ -149,8 +143,7 @@ module.exports = {
         quantity: 123,
         price: 480000,
         salesPrice: 380000,
-        image:
-          "https://res.cloudinary.com/dbpvy9xt6/image/upload/f_auto,q_auto/v1/product/lsupyihggsejjuhf59y3",
+        imageId: null,
         categoryId: 4,
       },
       {
@@ -159,8 +152,7 @@ module.exports = {
         quantity: 123,
         price: 220000,
         salesPrice: 120000,
-        image:
-          "https://res.cloudinary.com/dbpvy9xt6/image/upload/f_auto,q_auto/v1/product/hpmlnnm8qe9tev2vbztu",
+        imageId: null,
         categoryId: 4,
       },
       {
@@ -169,8 +161,7 @@ module.exports = {
         quantity: 123,
         price: 580000,
         salesPrice: 480000,
-        image:
-          "https://res.cloudinary.com/dbpvy9xt6/image/upload/f_auto,q_auto/v1/product/hpmlnnm8qe9tev2vbztu",
+        imageId: null,
         categoryId: 4,
       },
     ]);

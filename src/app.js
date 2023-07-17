@@ -20,16 +20,16 @@ app.use(
   })
 );
 app.use(cookieParser(process.env.secretCookie));
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json({ extended: true }));
+app.use(express.urlencoded({ limit: "50mb", extended: true }));
+app.use(express.json({ limit: "50mb", extended: true }));
 
 Route(app);
 
 const port = process.env.PORT || 3000;
 
 const options = {
-  key: readFileSync("./SSL/private.key"),
-  cert: readFileSync("./SSL/certificate.crt"),
+  key: readFileSync("./SSL/localhost+4-key.pem"),
+  cert: readFileSync("./SSL/localhost+4.pem"),
 };
 
 const server = https.createServer(options, app);

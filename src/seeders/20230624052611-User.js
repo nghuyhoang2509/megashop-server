@@ -17,8 +17,8 @@ module.exports = {
       "users",
       [
         {
-          fullName: "Nguyễn Huy Hoàng",
-          email: "nghuyhoang2509@gmail.com",
+          fullName: "Tôi là admin",
+          email: "admin@gmail.com",
           password: await hashPassword("admin1234"),
           role: "R3",
           accessToken: "",

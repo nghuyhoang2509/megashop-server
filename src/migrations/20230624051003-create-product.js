@@ -29,12 +29,16 @@ module.exports = {
         allowNull: true,
         type: Sequelize.INTEGER,
       },
-      image: {
-        type: Sequelize.STRING,
+      imageId: {
+        type: Sequelize.INTEGER,
         allowNull: true,
       },
       categoryId: {
-        allowNull: false,
+        allowNull: true,
+        type: Sequelize.INTEGER,
+      },
+      brandId: {
+        allowNull: true,
         type: Sequelize.INTEGER,
       },
       createdAt: {

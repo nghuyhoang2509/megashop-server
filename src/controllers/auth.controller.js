@@ -57,4 +57,23 @@ module.exports = {
       return responseWithError(res, error.message);
     }
   },
+  async getAllUser(req, res, next) {
+    try {
+      const data = await AuthService.getAllUser();
+      return responseWithSuccess(res, "Lấy dữ liệu thành công", null, data);
+    } catch (error) {
+      return responseWithError(res, "Có lỗi xảy ra");
+    }
+  },
+
+  async changeRole(req, res, next) {
+    try {
+      const { userId, role } = req.body;
+      const data = await AuthService.changeRole(userId, role);
+      return responseWithSuccess(res, "Phân quyền thành công", null, data);
+    } catch (error) {
+      console.log(error);
+      return responseWithError(res, "Có lỗi xảy ra");
+    }
+  },
 };
