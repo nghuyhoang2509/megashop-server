@@ -32,8 +32,13 @@ const options = {
   cert: readFileSync("./SSL/localhost+4.pem"),
 };
 
-const server = https.createServer(options, app);
+/* const server = https.createServer(options, app); */
 
-server.listen(port, () => {
+app.listen(port, () => {
+  console.log(`Server run in http://localhost:${port}`);
+});
+
+/* server.listen(port, () => {
   console.log(`Server run in https://localhost:${port}`);
 });
+ */
