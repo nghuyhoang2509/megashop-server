@@ -13,22 +13,28 @@ module.exports = {
      * }], {});
      */
     await queryInterface.bulkInsert(
-      "brands",
+      "Brands",
       [
         {
           id: 1,
           name: "Apple",
           imageId: 8,
+          createdAt: new Date(),
+          updatedAt: new Date(),
         },
         {
           id: 2,
           name: "Samsung",
           imageId: 9,
+          createdAt: new Date(),
+          updatedAt: new Date(),
         },
         {
           id: 3,
           name: "Dell",
           imageId: 10,
+          createdAt: new Date(),
+          updatedAt: new Date(),
         },
       ],
       {}

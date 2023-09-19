@@ -27,6 +27,6 @@ module.exports = async function connectMySQL() {
     console.log("Connect MySql success");
     return sequelize;
   } catch (error) {
-    console.log(error);
+    console.log("DB error ", error);
   }
 };

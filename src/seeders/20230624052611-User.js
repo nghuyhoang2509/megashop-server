@@ -14,7 +14,7 @@ module.exports = {
      * }], {});
      */
     return await queryInterface.bulkInsert(
-      "users",
+      "Users",
       [
         {
           fullName: "Tôi là admin",
@@ -22,6 +22,8 @@ module.exports = {
           password: await hashPassword("admin1234"),
           role: "R3",
           accessToken: "",
+          createdAt: new Date(),
+          updatedAt: new Date(),
         },
       ],
       {}

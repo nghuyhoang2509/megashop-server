@@ -13,23 +13,31 @@ module.exports = {
      * }], {});
      */
     await queryInterface.bulkInsert(
-      "categories",
+      "Categories",
       [
         {
           name: "Laptop",
           imageId: 5,
+          createdAt: new Date(),
+          updatedAt: new Date(),
         },
         {
           name: "Tablet",
           imageId: 3,
+          createdAt: new Date(),
+          updatedAt: new Date(),
         },
         {
           name: "Phone",
           imageId: 2,
+          createdAt: new Date(),
+          updatedAt: new Date(),
         },
         {
           name: "Accessory",
           imageId: 1,
+          createdAt: new Date(),
+          updatedAt: new Date(),
         },
       ],
       {}

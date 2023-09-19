@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": null,
-    "database": "megashop",
-    "host": "127.0.0.1",
+    "username": "u3a36ngrfaquf8cw",
+    "password": "mIHxgs5HQPw7Mvew7W53",
+    "database": "b0rsi0pgbt8vsjmmig2o",
+    "host": "b0rsi0pgbt8vsjmmig2o-mysql.services.clever-cloud.com",
     "dialect": "mysql",
     "logging": false
   },
@@ -19,6 +19,7 @@
     "password": "mIHxgs5HQPw7Mvew7W53",
     "database": "b0rsi0pgbt8vsjmmig2o",
     "host": "b0rsi0pgbt8vsjmmig2o-mysql.services.clever-cloud.com",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "logging": false
   }
 }

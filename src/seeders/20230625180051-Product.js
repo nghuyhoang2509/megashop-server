@@ -12,7 +12,7 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
      */
-    await queryInterface.bulkInsert("products", [
+    await queryInterface.bulkInsert("Products", [
       {
         name: "Laptop Xiaomi RedmiBook 15 JYU4506AP",
         desc: "Ram 8GB, Chip Intel Core i5 thế hệ 11 - Xử lý liền mạch các tác vụ hằng ngày\nMàn hình FHD, kích thước 15.6 inch - Màn hình lớn cải thiện chất lượng làm việc Laptop Xiaomi Redmibook 15 JYU4506AP –hoạt động mạnh mẽ\nLaptop Xiaomi Redmibook 15 JYU4506AP là dòng máy bình dân được sản xuất dành cho học sinh, sinh viên hoặc dân văn phòng. Thiết bị được trang bị bộ vi xử lý cao cấp, bộ nhớ có dung lượng cao cùng nhiều ưu điểm vượt trội khác nên ngay từ khi mới ra mắt sản phẩm đã nhanh chóng chiếm được cảm tinh nhiều người dùng.",
@@ -21,8 +21,12 @@ module.exports = {
         salesPrice: 13190000,
         imageId: 4,
         categoryId: 1,
+        createdAt: new Date(),
+        updatedAt: new Date(),
         brandId: 3,
         brandId: null,
+        createdAt: new Date(),
+        updatedAt: new Date(),
       },
       {
         name: "Laptop Asus Gaming Rog Strix G15 G513IH HN015W",
@@ -32,7 +36,11 @@ module.exports = {
         salesPrice: 17890000,
         imageId: 6,
         categoryId: 1,
+        createdAt: new Date(),
+        updatedAt: new Date(),
         brandId: null,
+        createdAt: new Date(),
+        updatedAt: new Date(),
       },
       {
         name: "Laptop ASUS Gaming TUF FX506LHB-HN188W",
@@ -42,7 +50,11 @@ module.exports = {
         salesPrice: 15390000,
         imageId: 5,
         categoryId: 1,
+        createdAt: new Date(),
+        updatedAt: new Date(),
         brandId: null,
+        createdAt: new Date(),
+        updatedAt: new Date(),
       },
       {
         name: "Laptop HP Envy X360 13-BD0063DX",
@@ -52,7 +64,11 @@ module.exports = {
         salesPrice: 17890000,
         imageId: 6,
         categoryId: 1,
+        createdAt: new Date(),
+        updatedAt: new Date(),
         brandId: null,
+        createdAt: new Date(),
+        updatedAt: new Date(),
       },
       {
         name: "Laptop HP Gaming Victus 15-FA0031DX 6503849",
@@ -62,7 +78,11 @@ module.exports = {
         salesPrice: 16690000,
         imageId: 5,
         categoryId: 1,
+        createdAt: new Date(),
+        updatedAt: new Date(),
         brandId: null,
+        createdAt: new Date(),
+        updatedAt: new Date(),
       },
       {
         name: "Laptop Dell Inspiron 16 5620 N6I7110W1",
@@ -72,7 +92,11 @@ module.exports = {
         salesPrice: 21690000,
         imageId: 4,
         categoryId: 1,
+        createdAt: new Date(),
+        updatedAt: new Date(),
         brandId: null,
+        createdAt: new Date(),
+        updatedAt: new Date(),
       },
       {
         name: "Laptop Dell gaming G15 5511 4XJ74 Nhập khẩu chính hãng",
@@ -82,7 +106,11 @@ module.exports = {
         salesPrice: 26890000,
         imageId: 4,
         categoryId: 1,
+        createdAt: new Date(),
+        updatedAt: new Date(),
         brandId: null,
+        createdAt: new Date(),
+        updatedAt: new Date(),
       },
       {
         name: "iPhone 14 Pro Max",
@@ -92,6 +120,8 @@ module.exports = {
         salesPrice: 26890000,
         imageId: 2,
         categoryId: 3,
+        createdAt: new Date(),
+        updatedAt: new Date(),
       },
       {
         name: "Samsung Galaxy Z Fold4",
@@ -101,6 +131,8 @@ module.exports = {
         salesPrice: 31890000,
         imageId: 7,
         categoryId: 3,
+        createdAt: new Date(),
+        updatedAt: new Date(),
       },
       {
         name: "Xiaomi Redmi Note 11 Pro",
@@ -110,6 +142,8 @@ module.exports = {
         salesPrice: 5690000,
         imageId: 7,
         categoryId: 3,
+        createdAt: new Date(),
+        updatedAt: new Date(),
       },
       {
         name: "OPPO Reno8 T 5G",
@@ -119,6 +153,8 @@ module.exports = {
         salesPrice: 9590000,
         imageId: 7,
         categoryId: 3,
+        createdAt: new Date(),
+        updatedAt: new Date(),
       },
       {
         name: "Samsung Galaxy Tab A8 (2022)",
@@ -128,6 +164,8 @@ module.exports = {
         salesPrice: 6390000,
         imageId: 3,
         categoryId: 2,
+        createdAt: new Date(),
+        updatedAt: new Date(),
       },
       {
         name: "OPPO Pad Air 128GB",
@@ -137,6 +175,8 @@ module.exports = {
         salesPrice: 7890000,
         imageId: 3,
         categoryId: 2,
+        createdAt: new Date(),
+        updatedAt: new Date(),
       },
       {
         name: "Củ sạc Samsung 25W kèm cáp Type-C to Type-C",
@@ -146,6 +186,8 @@ module.exports = {
         salesPrice: 380000,
         imageId: 1,
         categoryId: 4,
+        createdAt: new Date(),
+        updatedAt: new Date(),
       },
       {
         name: "Củ sạc Xiaomi 20W cổng USB-C",
@@ -155,6 +197,8 @@ module.exports = {
         salesPrice: 120000,
         imageId: 1,
         categoryId: 4,
+        createdAt: new Date(),
+        updatedAt: new Date(),
       },
       {
         name: "Pin sạc dự phòng Xiaomi Redmi 20000mAh sạc nhanh 18W",
@@ -164,6 +208,8 @@ module.exports = {
         salesPrice: 480000,
         imageId: 7,
         categoryId: 4,
+        createdAt: new Date(),
+        updatedAt: new Date(),
       },
     ]);
   },
