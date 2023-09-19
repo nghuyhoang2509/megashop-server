@@ -36,6 +36,7 @@ module.exports = {
       include: [
         { model: Category, as: "categories" },
         { model: Brand, as: "brands" },
+        { model: image, as: "image" },
       ],
     });
   },
