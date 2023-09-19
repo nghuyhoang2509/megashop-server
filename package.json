@@ -2,6 +2,9 @@
   "name": "megashop-server",
   "version": "1.0.0",
   "main": "index.js",
+  "engines": {
+    "node": ">=14 <15"
+  },
   "scripts": {
     "start": "src/app.js",
     "dev": "nodemon src/app.js"
